@@ -1,0 +1,20 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 1800px;
+}
+.project {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.projects::before,
+.projects::after {
+    content: "";
+    flex-basis: 100%;
+    width: 0;
+    order: 2;
+}
+.project img {
+    width:290px;
+}
