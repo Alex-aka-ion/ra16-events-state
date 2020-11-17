@@ -63,6 +63,7 @@ class Portfolio extends Component {
 
     render() {
         const { selectedFilter } = this.state;
+        const projectFiltered = this.projects.filter(({ category }) => selectedFilter === 'All' ? true : category === selectedFilter);
 
         return <div className="wrapper">
             <Toolbar
@@ -71,7 +72,7 @@ class Portfolio extends Component {
                 onSelectFilter={(filter) => {
                     this.setState(state => ({ selectedFilter: filter }))
                 }}/>
-            <ProjectList projects={this.projects.filter(({ category }) => selectedFilter === 'All' ? true : category === selectedFilter)}/>
+            <ProjectList projects={projectFiltered}/>
         </div>
     }
 }
