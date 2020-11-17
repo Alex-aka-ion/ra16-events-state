@@ -68,7 +68,7 @@ class Portfolio extends Component {
         return <div className="wrapper">
             <Toolbar
                 filters={["All", "Websites", "Flayers", "Business Cards"]}
-                selected={this.state.selectedFilter}
+                selected={selectedFilter}
                 onSelectFilter={(filter) => {
                     this.setState(state => ({ selectedFilter: filter }))
                 }}/>

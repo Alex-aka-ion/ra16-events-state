@@ -8,7 +8,7 @@ class ProjectList extends Component {
 
     render() {
         const { projects } = this.props;
-        const pixelHeight = Math.round(projects.length*100*1.3);
+        const pixelHeight = projects.length*130;
 
         return <div className="projects" style={{height:pixelHeight}}>
             {projects.map((project, index) =>
